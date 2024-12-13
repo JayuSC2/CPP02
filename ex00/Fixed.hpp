@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 16:32:40 by juitz             #+#    #+#             */
-/*   Updated: 2024/12/13 13:50:23 by juitz            ###   ########.fr       */
+/*   Updated: 2024/12/13 14:06:06 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,4 @@ class	Fixed
 		
 		int	getRawBits(void) const;
 		void setRawBits(int const raw);
-
 };

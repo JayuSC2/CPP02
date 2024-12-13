@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 14:06:57 by juitz             #+#    #+#             */
-/*   Updated: 2024/12/13 14:07:11 by juitz            ###   ########.fr       */
+/*   Updated: 2024/12/13 19:06:54 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,25 @@ int Fixed::getRawBits(void) const
 void Fixed::setRawBits(int const raw)
 {
 	value = raw;
+}
+
+float Fixed::toFloat(void) const
+{
+	return (static_cast<float>(value) / (1 << fract_bits));
+}
+
+int	Fixed::toInt(void) const
+{
+	return (value >> fract_bits);
+}
+
+void Fixed::print(std::ostream &out) const
+{
+    out << toFloat();
+}
+
+std::ostream &operator<<(std::ostream &out, const Fixed &fPoint)
+{
+	fPoint.print(out);
+	return (out);
 }

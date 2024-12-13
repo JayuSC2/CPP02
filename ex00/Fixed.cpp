@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 16:32:46 by juitz             #+#    #+#             */
-/*   Updated: 2024/12/13 13:52:47 by juitz            ###   ########.fr       */
+/*   Updated: 2024/12/13 14:06:41 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,6 @@ Fixed::Fixed() : value(0)
 	std::cout << "Default constructor called" << std::endl;
 }
 
-/* Fixed::Fixed(const int &value) : value(value)
-{
-} */
 Fixed::Fixed(const Fixed &copy) : value(copy.value)
 {
 	std::cout << "Copy constructor called" << std::endl;
