@@ -6,7 +6,7 @@
 #    By: juitz <juitz@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/09 16:28:01 by juitz             #+#    #+#              #
-#    Updated: 2024/12/09 16:32:08 by juitz            ###   ########.fr        #
+#    Updated: 2024/12/13 13:53:06 by juitz            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ CXX = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS =	main.cpp
+SRCS =	main.cpp\
+		Fixed.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
