@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 14:05:20 by juitz             #+#    #+#             */
-/*   Updated: 2024/12/13 19:06:05 by juitz            ###   ########.fr       */
+/*   Updated: 2024/12/16 16:26:22 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,9 @@ class	Fixed
 	public:
 		Fixed();
 		Fixed(const int &value);
-		~Fixed();
+		Fixed(const float &value);
 		Fixed(const Fixed &copy);
+		~Fixed();
 		Fixed &operator=(const Fixed &other);
 		//std::ostream &operator<<(std::ostream &out, const Fixed &fPoint);
 		
