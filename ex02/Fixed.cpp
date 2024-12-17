@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 14:06:57 by juitz             #+#    #+#             */
-/*   Updated: 2024/12/16 16:36:40 by juitz            ###   ########.fr       */
+/*   Updated: 2024/12/17 14:35:37 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,20 @@ std::ostream &operator<<(std::ostream &out, const Fixed &fPoint)
 {
 	fPoint.print(out);
 	return (out);
+}
+
+bool Fixed::operator>(const Fixed &other) const
+{
+	if (this->value > other.value)
+		return (true);
+	else
+		return(false);
+}
+
+bool Fixed::operator<(const Fixed &other) const
+{
+	if (this->value < other.value)
+		return (true);
+	else
+		return(false);
 }

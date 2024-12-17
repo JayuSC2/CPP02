@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 14:05:20 by juitz             #+#    #+#             */
-/*   Updated: 2024/12/16 16:45:39 by juitz            ###   ########.fr       */
+/*   Updated: 2024/12/17 14:34:50 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,14 @@ class	Fixed
 		Fixed(const float &value);
 		Fixed(const Fixed &copy);
 		~Fixed();
+		
 		Fixed &operator=(const Fixed &other);
-		Fixed &operator>(const Fixed &other);
-		Fixed &operator<(const Fixed &other);
-		Fixed &operator>=(const Fixed &other);
-		Fixed &operator<=(const Fixed &other);
-		Fixed &operator==(const Fixed &other);
-		Fixed &operator!=(const Fixed &other);
+		bool operator>(const Fixed &other) const;
+		bool operator<(const Fixed &other) const;
+		bool operator>=(const Fixed &other) const;
+		bool operator<=(const Fixed &other) const;
+		bool operator==(const Fixed &other) const;
+		bool operator!=(const Fixed &other) const;
 		
 		Fixed &operator+(const Fixed &other);
 		Fixed &operator-(const Fixed &other);
@@ -48,6 +49,10 @@ class	Fixed
 		float toFloat(void) const;
 		int	toInt(void) const;
 		void print(std::ostream &out) const;
+		static Fixed &min(Fixed &fp1, Fixed &fp2);
+		static Fixed &min(const Fixed &fp1, const Fixed &fp2);
+		static Fixed &max(Fixed &fp1, Fixed &fp2);
+		static Fixed &max(const Fixed &fp1, const Fixed &fp2);
 };
 
 std::ostream &operator<<(std::ostream &out, const Fixed &fPoint);
