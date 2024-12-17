@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 14:06:57 by juitz             #+#    #+#             */
-/*   Updated: 2024/12/17 14:35:37 by juitz            ###   ########.fr       */
+/*   Updated: 2024/12/17 19:22:01 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,16 +82,91 @@ std::ostream &operator<<(std::ostream &out, const Fixed &fPoint)
 
 bool Fixed::operator>(const Fixed &other) const
 {
-	if (this->value > other.value)
-		return (true);
-	else
-		return(false);
+	return (this->value > other.value);
 }
 
 bool Fixed::operator<(const Fixed &other) const
 {
-	if (this->value < other.value)
-		return (true);
-	else
-		return(false);
+	return (this->value < other.value);
+}
+
+bool Fixed::operator>=(const Fixed &other) const
+{
+	return (this->value >= other.value);
+}
+
+bool Fixed::operator<=(const Fixed &other) const
+{
+	return (this->value <= other.value);
+}
+
+bool Fixed::operator==(const Fixed &other) const
+{
+	return (this->value == other.value);
+}
+
+bool Fixed::operator!=(const Fixed &other) const
+{
+	return (this->value != other.value);
+}
+
+Fixed Fixed::operator+(const Fixed &other) const
+{
+	return Fixed(this->toFloat() + other.toFloat());
+}
+
+Fixed Fixed::operator-(const Fixed &other) const
+{
+    return Fixed(this->toFloat() - other.toFloat());
+}
+
+Fixed Fixed::operator*(const Fixed &other) const
+{
+	return Fixed(this->toFloat() * other.toFloat());
+}
+
+Fixed Fixed::operator/(const Fixed &other) const
+{
+	return Fixed(this->toFloat() / other.toFloat());
+}
+
+Fixed &Fixed::operator++()
+{
+	++value;
+	return (*this);
+}
+
+Fixed Fixed::operator++(int)
+{
+	Fixed temp = *this;
+	++value;
+	return (temp);
+}
+
+Fixed &Fixed::min(Fixed &fp1, Fixed &fp2)
+{
+	if (fp1 < fp2)
+		return (fp1);
+	return (fp2);
+}
+
+const Fixed &Fixed::min(const Fixed &fp1, const Fixed &fp2)
+{
+	if (fp1 < fp2)
+		return (fp1);
+	return (fp2);
+}
+
+Fixed &Fixed::max(Fixed &fp1, Fixed &fp2)
+{
+	if (fp1 > fp2)
+		return (fp1);
+	return (fp2);
+}
+
+const Fixed &Fixed::max(const Fixed &fp1, const Fixed &fp2)
+{
+	if (fp1 > fp2)
+		return (fp1);
+	return (fp2);
 }
