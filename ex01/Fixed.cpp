@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 14:06:57 by juitz             #+#    #+#             */
-/*   Updated: 2024/12/16 16:36:40 by juitz            ###   ########.fr       */
+/*   Updated: 2024/12/17 14:00:34 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Fixed::Fixed(const float &value) : value(static_cast<int>(roundf(value * (1 << f
     std::cout << "Float constructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed &copy) : value(copy.value)
+Fixed::Fixed(const Fixed &copy)
 {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = copy;
