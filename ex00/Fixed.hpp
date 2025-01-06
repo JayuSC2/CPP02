@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 16:32:40 by juitz             #+#    #+#             */
-/*   Updated: 2024/12/13 14:06:06 by juitz            ###   ########.fr       */
+/*   Updated: 2025/01/06 15:10:58 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 class	Fixed
 {
 	private:
-		int					value;
+		int					_value;
 		static const int	fract_bits;
 
 	public:
